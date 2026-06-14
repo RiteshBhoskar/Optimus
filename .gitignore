@@ -1,0 +1,15 @@
+#Frontend
+
+/frontend/.next
+/frontend/node_modules
+/frontend/.env
+/frontend/out/
+/frontend/build
+/frontend/.DS_Store
+/frontend/*.pem
+/frontend/.vercel
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+#Backend
+/backend/.env
