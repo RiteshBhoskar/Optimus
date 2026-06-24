@@ -12,8 +12,24 @@ import { useState } from "react"
 const Example = () => {
   const [code , setCode ]= useState("");
 
-  const sendCode = () => {
-    console.log(code)
+  const sendCode = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/", {
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+          code
+        }),
+      }) 
+
+      if (response.ok) {
+        console.log("working")
+      }
+    } catch(error) {
+      console.log(error)
+    }
   }
   return ( 
     <InputGroup className="w-full invert min-h-[300px] max-w-sm bg-background">

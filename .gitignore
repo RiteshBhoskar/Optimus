@@ -13,3 +13,7 @@
 
 #Backend
 /backend/.env
+/backend/tmp
+
+
+.DS_Store
